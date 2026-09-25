@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="fabric">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandrasekar K | Senior Data Engineer & Microsoft Specialist</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Ultra-interactive portfolio of Chandrasekar K - Data Engineer specializing in Microsoft Fabric, Azure, PySpark, SQL, and Medallion Lakehouse Architectures. Microsoft Certified DP-700 & DP-900.">
+    <meta name="keywords" content="Chandrasekar K, Data Engineer, Microsoft Fabric, Azure Data Factory, PySpark, SQL, Databricks, Delta Lake, DP-700, DP-900, Portfolio">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas Background for Interactive Particle Network & Data Streams -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Theme Accent Palette Switcher Floating Drawer -->
+    <div class="accent-switcher" id="accent-switcher">
+        <button class="switcher-toggle" id="switcher-toggle" title="Customize Accent Theme">
+            <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="switcher-menu">
+            <span class="switcher-title">Theme Accent</span>
+            <div class="palette-options">
+                <button class="palette-btn active" data-color="fabric" style="background: #00f2fe;" title="Microsoft Fabric Cyan"></button>
+                <button class="palette-btn" data-color="azure" style="background: #0078d4;" title="Azure Blue"></button>
+                <button class="palette-btn" data-color="databricks" style="background: #ff5722;" title="Databricks Flame"></button>
+                <button class="palette-btn" data-color="emerald" style="background: #10b981;" title="Cyber Emerald"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-symbol">&lt;C/&gt;</span> Chandrasekar K
+            </a>
+            
+            <div class="nav-right">
+                <button class="sound-toggle" id="sound-toggle" title="Toggle Sound Effects">
+                    <i class="fa-solid fa-volume-high" id="sound-icon"></i>
+                </button>
+
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#terminal" class="nav-link">CLI Terminal</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="container hero-container-grid reveal">
+            <div class="hero-content">
+                <div class="badge-accent">
+                    <span class="pulse-dot"></span> Available for Data Engineering Roles
+                </div>
+                <h1 class="hero-name">Chandrasekar K</h1>
+                <h2 class="hero-title">
+                    I build <span class="typewriter" id="typewriter-text" data-words='["scalable data pipelines.", "Microsoft Fabric Lakehouses.", "Azure Data Factory ETL/ELT.", "PySpark & Delta Lake solutions."]'></span>
+                </h2>
+                <p class="hero-tagline">
+                    Data Engineer specializing in <strong>Microsoft Fabric</strong>, <strong>Azure Data Factory</strong>, <strong>PySpark</strong>, <strong>SQL</strong>, and <strong>Medallion Architecture</strong>. Experienced in incremental processing, schema validation, data-quality frameworks, and dimensional modeling.
+                </p>
+
+                <!-- Certification Badges Pill -->
+                <div class="hero-cert-pills">
+                    <div class="cert-pill tilt-card" onclick="openCertModal('DP 700.pdf', 'Microsoft Certified: Fabric Data Engineer Associate (DP-700)')">
+                        <i class="fa-solid fa-certificate gold-icon"></i>
+                        <span>DP-700 Fabric Engineer</span>
+                        <span class="pill-verified"><i class="fa-solid fa-check-double"></i> Verified</span>
+                    </div>
+                    <div class="cert-pill tilt-card" onclick="openCertModal('DP 900.pdf', 'Microsoft Certified: Azure Data Fundamentals (DP-900)')">
+                        <i class="fa-solid fa-cloud-bolt blue-icon"></i>
+                        <span>DP-900 Azure Data</span>
+                        <span class="pill-verified"><i class="fa-solid fa-check-double"></i> Verified</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="Chandrasekar_Resume.pdf" class="btn btn-primary sound-click" target="_blank" download="Chandrasekar_Resume.pdf">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
+                    <a href="#projects" class="btn btn-outline sound-click">
+                        <i class="fa-solid fa-diagram-project"></i> View Projects
+                    </a>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon sound-click" aria-label="GitHub" title="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon sound-click" aria-label="LinkedIn" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:chandruanalyst22@gmail.com" class="social-icon sound-click" aria-label="Email" title="Email Chandrasekar">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:+918778673371" class="social-icon sound-click" aria-label="Phone" title="Call Chandrasekar">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/918778673371" target="_blank" rel="noopener noreferrer" class="social-icon sound-click" aria-label="WhatsApp" title="WhatsApp Chat">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-area">
+                <div class="hero-avatar-wrapper tilt-card">
+                    <img src="profile.jpg" alt="Chandrasekar K" class="hero-avatar">
+                    <div class="avatar-glow-ring"></div>
+                    <div class="avatar-shimmer"></div>
+                    
+                    <!-- Floating Tech Cards -->
+                    <div class="floating-badge badge-fabric">
+                        <i class="fa-solid fa-layer-group"></i> Fabric Lakehouse
+                    </div>
+                    <div class="floating-badge badge-azure">
+                        <i class="fa-brands fa-microsoft"></i> Azure Data Factory
+                    </div>
+                    <div class="floating-badge badge-pyspark">
+                        <i class="fa-solid fa-bolt"></i> PySpark & Delta
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <a href="#about" aria-label="Scroll Down">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow-down"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-grid reveal">
+                <div class="about-info">
+                    <p class="bio-text">
+                        I am an entry-level <strong>Data Engineer</strong> with hands-on internship and project experience building robust end-to-end data pipelines and cloud integrations using <strong>Python, SQL, Azure Data Factory, Microsoft Fabric, and PySpark</strong>.
+                    </p>
+
+                    <p class="bio-text">
+                        Holding a <strong>Master of Computer Applications (MCA)</strong> degree with a CGPA of 8.4/10 and dual Microsoft Certifications (<strong>DP-700 & DP-900</strong>), I specialize in <strong>Medallion Lakehouse Architectures (Bronze/Silver/Gold)</strong>, incremental ingestion, Delta MERGE operations, schema validation, and SCD Type 1/2 dimension processing.
+                    </p>
+                    
+                    <!-- Animated Counter Metrics -->
+                    <div class="info-metrics">
+                        <div class="metric-card tilt-card">
+                            <span class="metric-val count-up" data-target="8.4" data-decimals="1">0.0</span>
+                            <span class="metric-label">MCA CGPA</span>
+                        </div>
+                        <div class="metric-card tilt-card">
+                            <span class="metric-val count-up" data-target="2" data-decimals="0">0</span>
+                            <span class="metric-label">Microsoft Certs (DP-700 & 900)</span>
+                        </div>
+                        <div class="metric-card tilt-card">
+                            <span class="metric-val count-up" data-target="50" data-suffix="K+" data-decimals="0">0</span>
+                            <span class="metric-label">Monthly Records Pipeline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-details">
+                    <h3 class="details-title">My Technical Core</h3>
+                    <ul class="about-checklist">
+                        <li class="tilt-card">
+                            <i class="fa-solid fa-circle-check checklist-icon"></i>
+                            <div>
+                                <strong>Lakehouse & Medallion Architecture:</strong> Designing Bronze, Silver, and Gold data layers in Microsoft Fabric and OneLake for seamless downstream reporting.
+                            </div>
+                        </li>
+                        <li class="tilt-card">
+                            <i class="fa-solid fa-circle-check checklist-icon"></i>
+                            <div>
+                                <strong>Azure Cloud ETL Pipelines:</strong> Building parameterized ADF pipelines for multi-source ingestion (API, files, relational databases) into ADLS Gen2 & Azure SQL.
+                            </div>
+                        </li>
+                        <li class="tilt-card">
+                            <i class="fa-solid fa-circle-check checklist-icon"></i>
+                            <div>
+                                <strong>PySpark & Big Data Processing:</strong> Crafting high-performance PySpark transformations, window functions, partitioning, and Delta MERGE operations.
+                            </div>
+                        </li>
+                        <li class="tilt-card">
+                            <i class="fa-solid fa-circle-check checklist-icon"></i>
+                            <div>
+                                <strong>Dimensional Modeling & SCD Type 2:</strong> Architecting Star Schema schemas (FactSales, DimCustomer, DimProduct) and tracking historical changes with SCD Type 2 logic.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Data Engineering CLI Terminal Section -->
+    <section id="terminal" class="section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Interactive Developer Console</span>
+                <h2 class="section-title">Data Engineering CLI</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="terminal-wrapper reveal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="term-btn btn-close"></span>
+                            <span class="term-btn btn-min"></span>
+                            <span class="term-btn btn-max"></span>
+                        </div>
+                        <div class="terminal-title">chandrasekar@fabric-node-01: ~ (bash)</div>
+                        <div class="terminal-actions">
+                            <button class="term-action-btn" id="term-clear" title="Clear Terminal"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line">
+                            <span class="term-host">chandrasekar@fabric-node-01:~$</span> <span class="term-cmd">welcome</span>
+                        </div>
+                        <div class="terminal-output">
+                            <pre class="term-art">
+   _____ _                 _                    _              _  __
+  / ____| |               | |                  | |            | |/ /
+ | |    | |__   __ _ _ __ | |  _ __  __ _ ___  | | _____ _ __ | ' / 
+ | |    | '_ \ / _` | '_ \| | | '__/ _` / __| | |/ / _ \ '_ \|  <  
+ | |____| | | | (_| | | | | | | | | (_| \__ \ |   <  __/ | | | . \ 
+  \_____|_| |_|\__,_|_| |_|_| |_|  \__,_|___/ |_|\_\___|_| |_|_|\_\
+                            </pre>
+                            <p class="term-welcome-msg">
+                                Data Engineering Environment v2.6. Type <span class="term-highlight">'help'</span> or click the buttons below to run pipeline commands.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Command Chips -->
+                    <div class="terminal-chips">
+                        <button class="chip-btn" onclick="runTerminalCmd('summary')"><i class="fa-solid fa-user"></i> summary</button>
+                        <button class="chip-btn" onclick="runTerminalCmd('skills')"><i class="fa-solid fa-code"></i> skills</button>
+                        <button class="chip-btn" onclick="runTerminalCmd('projects')"><i class="fa-solid fa-diagram-project"></i> projects</button>
+                        <button class="chip-btn" onclick="runTerminalCmd('certs')"><i class="fa-solid fa-certificate"></i> certs</button>
+                        <button class="chip-btn" onclick="runTerminalCmd('run-pipeline')"><i class="fa-solid fa-play"></i> run-pipeline</button>
+                        <button class="chip-btn" onclick="runTerminalCmd('contact')"><i class="fa-solid fa-envelope"></i> contact</button>
+                    </div>
+
+                    <div class="terminal-input-row">
+                        <span class="term-host">chandrasekar@fabric-node-01:~$</span>
+                        <input type="text" id="terminal-input" placeholder="Type 'help' or command..." autocomplete="off" spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">What I Bring to the Table</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="skills-grid reveal">
+                <!-- Category 1: Programming & Big Data -->
+                <div class="skill-card tilt-card">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Programming & Big Data</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name-percent"><span>Python</span><span class="perc">90%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>SQL (PostgreSQL / MySQL)</span><span class="perc">95%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>PySpark</span><span class="perc">88%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Apache Spark & Delta Lake</span><span class="perc">85%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Microsoft Fabric & Cloud -->
+                <div class="skill-card tilt-card">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3>Microsoft Fabric & Azure</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name-percent"><span>Microsoft Fabric & OneLake</span><span class="perc">92%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Azure Data Factory (ADF)</span><span class="perc">90%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Azure Databricks</span><span class="perc">82%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>ADLS Gen2 & Azure SQL</span><span class="perc">88%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Data Engineering Methodologies -->
+                <div class="skill-card tilt-card">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Engineering Concepts</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name-percent"><span>ETL / ELT Architecture</span><span class="perc">95%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Medallion Architecture (Bronze/Silver/Gold)</span><span class="perc">90%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Dimensional Modeling & Star Schema</span><span class="perc">88%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Incremental Loading & SCD Type 1/2</span><span class="perc">86%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 86%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Category 4: Tools & DevOps -->
+                <div class="skill-card tilt-card">
+                    <div class="skill-card-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3>Tools & Databases</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <div class="skill-name-percent"><span>Git & GitHub</span><span class="perc">90%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Linux & Shell Environment</span><span class="perc">82%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Data Quality & Schema Validation</span><span class="perc">88%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                        </li>
+                        <li>
+                            <div class="skill-name-percent"><span>Microsoft Graph & Cloud API</span><span class="perc">85%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Professional Track</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2026 – May 2026</div>
+                    <div class="timeline-content tilt-card">
+                        <div class="company-badge">Internship</div>
+                        <h3 class="role-title">Data Engineering Intern</h3>
+                        <h4 class="company-name">Donut Tech Private Limited</h4>
+                        
+                        <ul class="timeline-tasks">
+                            <li>
+                                <i class="fa-solid fa-arrow-right task-bullet"></i>
+                                <span>Built a <strong>Microsoft Teams communication integration</strong> using Python and Microsoft Graph API to process messages, tasks, and approval events, triggering automated notifications.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-arrow-right task-bullet"></i>
+                                <span>Delivered automated email alerts via <strong>Microsoft Graph API</strong> and WhatsApp notifications using <strong>WhatsApp Cloud API</strong> for management and employee workflow follow-ups.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-arrow-right task-bullet"></i>
+                                <span>Orchestrated <strong>Azure Data Factory (ADF)</strong> pipelines to incrementally load <strong>~50,000 records per month</strong> into Azure SQL with schema mapping, deduplication, filtering, and null handling.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-arrow-right task-bullet"></i>
+                                <span>Structured Teams communication data in <strong>Azure SQL</strong> for downstream activity analysis, tracking task assignments, approvals, response times, and sender/recipient timestamps.</span>
+                            </li>
+                        </ul>
+
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Azure Data Factory</span>
+                            <span class="tag">Azure SQL</span>
+                            <span class="tag">Microsoft Graph API</span>
+                            <span class="tag">WhatsApp Cloud API</span>
+                            <span class="tag">ETL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Live Pipeline Simulator -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Hands-On Implementations</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Live Pipeline Simulation Widget Banner -->
+            <div class="pipeline-sim-banner reveal">
+                <div class="sim-info">
+                    <span class="sim-badge"><i class="fa-solid fa-bolt-lightning"></i> Interactive Feature</span>
+                    <h3>Live Data Pipeline Execution Simulator</h3>
+                    <p>Click "Run Simulation" below to trigger real-time data ingestion across Medallion layers!</p>
+                </div>
+                <button class="btn btn-primary sound-click" id="trigger-pipeline-sim">
+                    <i class="fa-solid fa-play"></i> Run Live Pipeline Simulation
+                </button>
+            </div>
+
+            <div class="projects-grid reveal">
+                
+                <!-- Project 1: E-Commerce Lakehouse Data Platform -->
+                <div class="project-card tilt-card" id="card-p1">
+                    <div class="project-header">
+                        <div class="project-category">
+                            <i class="fa-solid fa-layer-group"></i> Microsoft Fabric Lakehouse
+                        </div>
+                        <h3 class="project-title">E-Commerce Lakehouse Data Platform</h3>
+                    </div>
+
+                    <!-- Architecture Visual Diagram Pill with Animated Nodes -->
+                    <div class="architecture-flow" id="flow-p1">
+                        <div class="arch-step bronze" id="node-b1">
+                            <span class="arch-layer">Bronze</span>
+                            <span class="arch-desc">Raw Ingestion</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right arch-arrow"></i>
+                        <div class="arch-step silver" id="node-s1">
+                            <span class="arch-layer">Silver</span>
+                            <span class="arch-desc">Cleaned & MERGE</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right arch-arrow"></i>
+                        <div class="arch-step gold" id="node-g1">
+                            <span class="arch-layer">Gold</span>
+                            <span class="arch-desc">Star Schema</span>
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        Designed and deployed an end-to-end Medallion Lakehouse platform on <strong>Microsoft Fabric</strong> utilizing OneLake, Data Factory Pipelines, and Fabric Notebooks to process multi-channel e-commerce sales transactions.
+                    </p>
+
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check check-icon"></i> Developed PySpark & SQL data transformations with incremental ingestion and schema validation.</li>
+                        <li><i class="fa-solid fa-check check-icon"></i> Implemented Delta MERGE for deduplication and strict data quality assertion rules.</li>
+                        <li><i class="fa-solid fa-check check-icon"></i> Modeled a high-performance Star Schema featuring <code>FactSales</code>, <code>DimCustomer</code>, <code>DimProduct</code>, and <code>DimDate</code>.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span class="tag">Microsoft Fabric</span>
+                        <span class="tag">OneLake</span>
+                        <span class="tag">PySpark</span>
+                        <span class="tag">Delta Lake</span>
+                        <span class="tag">Star Schema</span>
+                        <span class="tag">SQL</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="btn btn-sm btn-outline sound-click" onclick="openProjectModal('project1')">
+                            <i class="fa-solid fa-circle-info"></i> Architecture Deep Dive
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Azure Retail Data Engineering Pipeline -->
+                <div class="project-card tilt-card" id="card-p2">
+                    <div class="project-header">
+                        <div class="project-category">
+                            <i class="fa-brands fa-microsoft"></i> Azure & Databricks ETL
+                        </div>
+                        <h3 class="project-title">Azure Retail Data Engineering Pipeline</h3>
+                    </div>
+
+                    <!-- Pipeline Flow Visual Diagram -->
+                    <div class="architecture-flow" id="flow-p2">
+                        <div class="arch-step bronze" id="node-b2">
+                            <span class="arch-layer">ADF Pipelines</span>
+                            <span class="arch-desc">API & DB Ingestion</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right arch-arrow"></i>
+                        <div class="arch-step silver" id="node-s2">
+                            <span class="arch-layer">Databricks</span>
+                            <span class="arch-desc">PySpark Windowing</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right arch-arrow"></i>
+                        <div class="arch-step gold" id="node-g2">
+                            <span class="arch-layer">ADLS Gen2</span>
+                            <span class="arch-desc">SCD Type 2 Delta</span>
+                        </div>
+                    </div>
+
+                    <p class="project-description">
+                        Constructed a scalable cloud data pipeline leveraging <strong>Azure Data Factory</strong>, <strong>Azure Databricks</strong>, and <strong>ADLS Gen2</strong> to ingest and transform complex retail transaction datasets.
+                    </p>
+
+                    <ul class="project-highlights">
+                        <li><i class="fa-solid fa-check check-icon"></i> Built parameterized ADF ingestion pipelines handling API, file, and relational sources into ADLS Gen2.</li>
+                        <li><i class="fa-solid fa-check check-icon"></i> Executed PySpark window functions, data partitioning, and robust validation checks inside Databricks.</li>
+                        <li><i class="fa-solid fa-check check-icon"></i> Applied SCD Type 2 dimension handling to preserve full historical changes of customer profiles.</li>
+                    </ul>
+
+                    <div class="tech-tags">
+                        <span class="tag">Azure Data Factory</span>
+                        <span class="tag">Azure Databricks</span>
+                        <span class="tag">ADLS Gen2</span>
+                        <span class="tag">PySpark</span>
+                        <span class="tag">SCD Type 2</span>
+                        <span class="tag">Delta Lake</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="btn btn-sm btn-outline sound-click" onclick="openProjectModal('project2')">
+                            <i class="fa-solid fa-circle-info"></i> Pipeline Deep Dive
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Verified Credentials</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="cert-grid reveal">
+                
+                <!-- Cert 1: DP-700 Holographic Shimmer Card -->
+                <div class="cert-card holo-card tilt-card" onclick="openCertModal('DP 700.pdf', 'Microsoft Certified: Fabric Data Engineer Associate (DP-700)')">
+                    <div class="holo-shimmer"></div>
+                    <div class="cert-badge-wrapper">
+                        <div class="cert-icon-box fabric-box">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <span class="cert-status-tag"><i class="fa-solid fa-shield-check"></i> Verified Microsoft</span>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Microsoft Certified</span>
+                        <h3 class="cert-title">Fabric Data Engineer Associate (DP-700)</h3>
+                        <p class="cert-meta">
+                            <strong>Credential ID:</strong> 8456E0E8655C51C5<br>
+                            <strong>Cert #:</strong> BF0D6B-97L042<br>
+                            <strong>Issued:</strong> August 21, 2026
+                        </p>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="btn btn-sm btn-primary sound-click">
+                            <i class="fa-solid fa-file-pdf"></i> View Official PDF Certificate
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Cert 2: DP-900 Holographic Shimmer Card -->
+                <div class="cert-card holo-card tilt-card" onclick="openCertModal('DP 900.pdf', 'Microsoft Certified: Azure Data Fundamentals (DP-900)')">
+                    <div class="holo-shimmer"></div>
+                    <div class="cert-badge-wrapper">
+                        <div class="cert-icon-box azure-box">
+                            <i class="fa-solid fa-cloud-check"></i>
+                        </div>
+                        <span class="cert-status-tag"><i class="fa-solid fa-shield-check"></i> Verified Microsoft</span>
+                    </div>
+                    <div class="cert-body">
+                        <span class="cert-issuer">Microsoft Certified</span>
+                        <h3 class="cert-title">Azure Data Fundamentals (DP-900)</h3>
+                        <p class="cert-meta">
+                            <strong>Credential ID:</strong> 5AEDDA6327CED867<br>
+                            <strong>Cert #:</strong> C0D8C6-2AC5RC<br>
+                            <strong>Issued:</strong> August 7, 2026
+                        </p>
+                    </div>
+                    <div class="cert-footer">
+                        <span class="btn btn-sm btn-primary sound-click">
+                            <i class="fa-solid fa-file-pdf"></i> View Official PDF Certificate
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Academic Background</span>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="education-grid reveal">
+                <!-- MCA -->
+                <div class="edu-card tilt-card">
+                    <div class="edu-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-period">Jun 2024 – May 2026</span>
+                        <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+                        <h4 class="edu-school">SRM Valliammai Engineering College, Chennai</h4>
+                        <div class="edu-score-pill">
+                            <i class="fa-solid fa-star"></i> CGPA: <strong>8.4 / 10</strong>
+                        </div>
+                        <p class="edu-desc">
+                            Specialized in Cloud Computing, Database Management Systems, Advanced Data Structures, and Software Engineering.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BCA -->
+                <div class="edu-card tilt-card">
+                    <div class="edu-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-period">2021 – 2024</span>
+                        <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+                        <h4 class="edu-school">Apollo Arts & Science College, Chennai</h4>
+                        <div class="edu-score-pill">
+                            <i class="fa-solid fa-star"></i> CGPA: <strong>8.0 / 10</strong>
+                        </div>
+                        <p class="edu-desc">
+                            Foundation coursework in Programming (Python, C++), Database Systems (SQL), Web Technologies, and Data Analysis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Let's Connect</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-grid reveal">
+                <!-- Contact Info Cards -->
+                <div class="contact-info-wrapper">
+                    <h3 class="contact-subtitle">Get In Touch</h3>
+                    <p class="contact-text">
+                        I am actively seeking opportunities as a <strong>Data Engineer</strong>, <strong>Azure Cloud Data Developer</strong>, or <strong>PySpark / Fabric Specialist</strong>. Feel free to reach out directly!
+                    </p>
+
+                    <div class="contact-cards-list">
+                        <a href="mailto:chandruanalyst22@gmail.com" class="contact-info-card tilt-card sound-click">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="label">Email Me</span>
+                                <span class="val">chandruanalyst22@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:+918778673371" class="contact-info-card tilt-card sound-click">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="label">Call Me</span>
+                                <span class="val">+91 87786 73371</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-info-card tilt-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="label">Location</span>
+                                <span class="val">Chennai, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/918778673371" target="_blank" rel="noopener noreferrer" class="contact-info-card whatsapp-card tilt-card sound-click">
+                            <div class="contact-card-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-card-text">
+                                <span class="label">WhatsApp Direct</span>
+                                <span class="val">Chat with Chandrasekar</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper tilt-card">
+                    <form id="contact-form" class="contact-form">
+                        <h3 class="contact-subtitle">Send a Message</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Project Collaboration" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Hi Chandrasekar, I would like to discuss..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="form-submit-btn" class="btn btn-primary btn-block sound-click">
+                            <i class="fa-solid fa-paper-plane"></i> <span>Send Message</span>
+                        </button>
+
+                        <div id="form-response-msg" class="form-response-msg"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Chandrasekar K. All rights reserved. Crafted for Data Engineering Excellence.</p>
+            <div class="footer-socials">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:chandruanalyst22@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top sound-click" id="scroll-to-top" aria-label="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Certificate & PDF View Modal -->
+    <div class="modal" id="pdf-modal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Certificate Preview</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe id="modal-iframe" src="" frameborder="0"></iframe>
+            </div>
+            <div class="modal-footer">
+                <a id="modal-download-btn" href="" download class="btn btn-primary btn-sm sound-click">
+                    <i class="fa-solid fa-download"></i> Download Document
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-backdrop" id="project-modal-backdrop"></div>
+        <div class="modal-content project-modal-content">
+            <div class="modal-header">
+                <h3 id="project-modal-title">Project Architecture Deep Dive</h3>
+                <button class="modal-close" id="project-modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="project-modal-body">
+                <!-- Injected dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
